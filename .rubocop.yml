@@ -11,6 +11,9 @@ AllCops:
 EmptyLinesAroundBlockBody:
   Enabled: false
 
+RepeatedExample:
+  Enabled: false
+
 Style/EmptyLinesAroundClassBody:
   Description: Keeps track of empty lines around class bodies.
   Enabled: false
