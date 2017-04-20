@@ -1,0 +1,46 @@
+  [1m[35m (134.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (472.0ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (254.1ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (247.6ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (245.8ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (122.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (243.7ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (128.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (246.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (129.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (247.4ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (253.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (131.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (260.6ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (129.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (255.7ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (129.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (246.3ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (131.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (243.1ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (131.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (247.8ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (122.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (245.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (131.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (244.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (254.8ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (250.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (253.4ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (254.0ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (251.2ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (254.6ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (253.5ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
+  [1m[35m (130.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "familybingoclub_test"[0m
+  [1m[35m (251.7ms)[0m  [1m[35mCREATE DATABASE "familybingoclub_test" ENCODING = 'unicode'[0m
