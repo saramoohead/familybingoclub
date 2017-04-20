@@ -1,14 +1,14 @@
 require "rails_helper"
 
 describe Square do
-  let!(:square) { described_class.create(code: "N001") }
+  let!(:square) { create(:square, code: "N001") }
 
   it "has a code relating to a number or picture" do
     expect(square.code).to eq "N001"
   end
 
   it "must have a unique code" do
-    duplicated_square = described_class.create(code: "N001")
+    duplicated_square = build(:square, code: "N001")
     expect(duplicated_square).not_to be_valid
   end
 
@@ -20,4 +20,6 @@ describe Square do
     square.called_timestamp = "2017-04-20 22:14:50 +0100"
     expect(square.called?).to be true
   end
+
+  # could validate timestamp?
 end
