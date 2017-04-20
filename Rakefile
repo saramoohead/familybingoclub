@@ -9,8 +9,8 @@ require 'cucumber/rake/task'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 
-RuboCop::RakeTask.new :cop
 RSpec::Core::RakeTask.new :spec
+RuboCop::RakeTask.new :cop
 Cucumber::Rake::Task.new :cuke
 
-task default: %i[cop spec cuke]
+task default: %i[spec cop cuke]
