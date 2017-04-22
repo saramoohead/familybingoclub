@@ -21,7 +21,11 @@ describe Board do
     expect(board_without_type).not_to be_valid
   end
 
-  it { should have_and_belong_to_many(:squares) }
+  # http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association
+  # For example, if your application includes (boards) and (squares),
+  # with each (board) having many (squares) and each (square)
+  # appearing in many (boards), you could declare the models as a has_and_belongs_to_many.
+  it { is_expected.to have_and_belong_to_many(:squares) }
 
   xit "must be an array of five arrays, each with five square ids" do
     expect(board.board_square_ids).to eq(

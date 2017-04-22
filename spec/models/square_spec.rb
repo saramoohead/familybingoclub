@@ -21,5 +21,7 @@ describe Square do
     expect(square.called?).to be true
   end
 
+  it { is_expected.to have_and_belong_to_many(:boards) }
+
   # could validate timestamp?
 end
