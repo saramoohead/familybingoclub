@@ -74,3 +74,15 @@ Style/Semicolon:
 
 Metrics/LineLength:
   Max: 110
+
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/ExampleLength:
+  Exclude:
+    - "**/*_spec.rb"

@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  factory :square do
+  factory :board do
     sequence :code do |n|
-      "N0#{n}"
+      "B0000#{n}"
     end
   end
 end

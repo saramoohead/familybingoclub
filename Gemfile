@@ -37,6 +37,7 @@ group :test do
   gem 'capybara'
   gem 'rubocop-rspec'
   gem 'rubocop'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development, :test do

@@ -7,7 +7,7 @@ describe Square do
     expect(square.code).to eq "N001"
   end
 
-  it "must have a unique code" do
+  it "has a unique code" do
     duplicated_square = build(:square, code: "N001")
     expect(duplicated_square).not_to be_valid
   end
