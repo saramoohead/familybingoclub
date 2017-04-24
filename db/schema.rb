@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422212137) do
+ActiveRecord::Schema.define(version: 20170424222736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
     t.string   "code"
-    t.string   "type"
+    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_boards_on_code", unique: true, using: :btree
@@ -30,11 +30,16 @@ ActiveRecord::Schema.define(version: 20170422212137) do
   end
 
   create_table "squares", force: :cascade do |t|
-    t.string   "code"
     t.datetime "called_timestamp"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.index ["code"], name: "index_squares_on_code", unique: true, using: :btree
+    t.string   "category"
+    t.string   "description"
+    t.string   "creator"
+    t.string   "local_src"
+    t.string   "organisation"
+    t.boolean  "exclude"
+    t.integer  "number"
   end
 
 end

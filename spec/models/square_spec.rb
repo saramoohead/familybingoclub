@@ -1,15 +1,26 @@
 require "rails_helper"
 
 describe Square do
-  let!(:square) { create(:square, code: "N001") }
+  let!(:square) { create(
+    :square, 
+    category: "N", 
+    description: "freespace", 
+    creator: "EOC",
+    organisation: "STJOHNS",
+    local_src: "free_space.jpg",
+    number: 42,
+    exclude: true
+  ) }
 
-  it "has a code relating to a number or picture" do
-    expect(square.code).to eq "N001"
+  it "has a category" do
+    expect(square.category).to eq "N"
   end
 
-  it "has a unique code" do
-    duplicated_square = build(:square, code: "N001")
-    expect(duplicated_square).not_to be_valid
+  context "without a category" do
+    let(:square_without_category) { build(:square, category: nil) }
+    it "is not valid" do
+      expect(square_without_category).not_to be_valid
+    end
   end
 
   it "is designated as uncalled if no called_timestamp exists" do
@@ -21,7 +32,39 @@ describe Square do
     expect(square.called?).to be true
   end
 
+  it "can have a description" do
+    expect(square.description).to eq "freespace"
+  end
+
+  it "can have a creator" do
+    expect(square.creator).to eq "EOC"
+  end
+
+  it "can have a local src" do
+    expect(square.local_src).to eq "free_space.jpg"
+  end
+
+  # TODO: replaced with a model association
+  it "can have an organisation" do
+    expect(square.organisation).to eq "STJOHNS"
+  end
+
+  it "can have a number for display" do
+    expect(square.number).to eq 42
+  end
+
+  it "can have an exclude value of true" do
+    expect(square.exclude).to be true
+  end
+
+  context "without an exclude value" do
+    let(:nil_square) { create(:square, exclude: nil) }
+    it "defaults to a value of true" do
+      expect(nil_square.exclude).to be true
+    end
+  end
+
   it { is_expected.to have_and_belong_to_many(:boards) }
 
-  # could validate timestamp?
+  # TODO validate timestamp
 end

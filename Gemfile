@@ -38,6 +38,7 @@ group :test do
   gem 'rubocop-rspec'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'rspec-collection_matchers'
 end
 
 group :development, :test do
