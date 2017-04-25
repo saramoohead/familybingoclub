@@ -5,19 +5,23 @@ class Board < ApplicationRecord
   has_and_belongs_to_many :squares
 
   after_create do
-    # associate this board with 25 random squares
-    r = Random.new
-    square_count = Square.count
-    byebug
-    25.times do
-      self.squares.create(Square.find(r.rand(1..square_count)))
-    end
+    give_board_25_squares
   end
 
   # you will probably want http://ruby-doc.org/core-1.9.2/Enumerable.html#method-i-take
   def board_square_ids
-    # board_square_ids << self.squares.ids
-    # return board_square_ids
-    return @square_list
+    self.squares.ids
+  end
+
+  def give_board_25_squares
+    r = Random.new
+
+    squares_in_category = Square.where(category: self.category)
+    square_count = squares_in_category.count
+
+    25.times do
+      rand_square_number = r.rand(0..(square_count - 1))
+      self.squares << squares_in_category[rand_square_number]
+    end
   end
 end

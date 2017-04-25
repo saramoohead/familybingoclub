@@ -27,17 +27,19 @@ describe Board do
   # appearing in many (boards), you could declare the models as a has_and_belongs_to_many.
   it { is_expected.to have_and_belong_to_many(:squares) }
 
-  it "when it is created, it is created with 25 squares associated" do
+  it "is created with 25 squares associated" do
     expect(board.squares.count).to eq 25
   end
 
+  it "can only contain squares of the board category" do
+    expect(board.squares.map(&:category)).to all eq "N"
+  end
+
   xit "must be an array of five arrays" do
-    board.squares << FactoryGirl.create_list(:square, 5)
     expect(board.board_square_ids).to have_exactly(5).items
   end
 
   xit "must be an array of five arrays, each with five square ids" do
-    board.squares << FactoryGirl.create_list(:square, 5)
     expect(board.board_square_ids).to eq(
       [
         [1, 16, 31, 46, 61],
@@ -47,9 +49,6 @@ describe Board do
         [5, 20, 35, 50, 65]
       ]
     )
-  end
-
-  xit "can only contain squares of one category" do
   end
 
   xcontext "when it is a number category" do

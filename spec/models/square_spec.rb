@@ -1,16 +1,18 @@
 require "rails_helper"
 
 describe Square do
-  let!(:square) { create(
-    :square, 
-    category: "N", 
-    description: "freespace", 
-    creator: "EOC",
-    organisation: "STJOHNS",
-    local_src: "free_space.jpg",
-    number: 42,
-    exclude: true
-  ) }
+  let!(:square) do
+    create(
+      :square,
+      category: "N",
+      description: "freespace",
+      creator: "EOC",
+      organisation: "STJOHNS",
+      local_src: "free_space.jpg",
+      number: 42,
+      exclude: true
+    )
+  end
 
   it "has a category" do
     expect(square.category).to eq "N"
@@ -18,6 +20,7 @@ describe Square do
 
   context "without a category" do
     let(:square_without_category) { build(:square, category: nil) }
+
     it "is not valid" do
       expect(square_without_category).not_to be_valid
     end
@@ -59,6 +62,7 @@ describe Square do
 
   context "without an exclude value" do
     let(:nil_square) { create(:square, exclude: nil) }
+
     it "defaults to a value of true" do
       expect(nil_square.exclude).to be true
     end
@@ -66,5 +70,5 @@ describe Square do
 
   it { is_expected.to have_and_belong_to_many(:boards) }
 
-  # TODO validate timestamp
+  # TODO: validate timestamp
 end
