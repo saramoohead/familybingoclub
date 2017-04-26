@@ -2,6 +2,7 @@ require "rails_helper"
 
 describe Board do
   let!(:board) { create(:board, code: "B00001", category: "N") }
+  let(:square) { create(:square) }
 
   it "has a board code" do
     expect(board.code).to eq "B00001"
@@ -35,20 +36,22 @@ describe Board do
     expect(board.squares.map(&:category)).to all eq "N"
   end
 
-  xit "must be an array of five arrays" do
-    expect(board.board_square_ids).to have_exactly(5).items
+  # I can't figure out how to test this
+  xit "can only contain a square once" do
+    board.squares << square
+    expect(board.squares << square).to raise_error
   end
 
-  xit "must be an array of five arrays, each with five square ids" do
-    expect(board.board_square_ids).to eq(
-      [
-        [1, 16, 31, 46, 61],
-        [2, 17, 32, 47, 62],
-        [3, 18, 0, 48, 63],
-        [4, 19, 34, 49, 64],
-        [5, 20, 35, 50, 65]
-      ]
-    )
+  it "must have an array of five arrays" do
+    expect(board.validated_picture_board.count).to eq(5)
+  end
+
+  it "has a middle square called FREE SPACE" do
+    middle_square = Square.find(board.validated_picture_board[2][2])
+    expect(middle_square[0].description).to eq "freespace"
+  end
+
+  xit "can ask Game if it is a winner" do
   end
 
   xcontext "when it is a number category" do
@@ -56,11 +59,6 @@ describe Board do
     end
   end
 
-  xit "has a middle square called FREE SPACE" do
-  end
-
-  xit "can ask Game if it is a winner" do
-  end
 end
 
 
